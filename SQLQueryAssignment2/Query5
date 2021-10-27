@@ -1,0 +1,3 @@
+Find out the number of R rated movies rented by “SUSAN WILSON”.
+select count(fl.title) from film_list fl join inventory i on i.film_id=fl.FID join rental r on r.inventory_id=i.inventory_id join 
+customer_list cl on cl.ID=r.customer_id where cl.name="SUSAN WILSON" and fl.rating="R";

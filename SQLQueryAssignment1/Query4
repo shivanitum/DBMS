@@ -1,0 +1,4 @@
+Find out the list of customers from Canada who have rented “NICK WAHLBERG” movies.
+select distinct(c.first_name),c.last_name from customer c join rental r on c.customer_id=r.customer_id join inventory i on r.inventory_id=
+i.inventory_id join customer_list cl on cl.ID=c.customer_id join film f on f.film_id=i.film_id join film_actor fa on fa.film_id=
+f.film_id join actor a on a.actor_id=fa.actor_id where a.first_name="NICK" and a.last_name="WAHLBERG" and cl.country="Canada";
